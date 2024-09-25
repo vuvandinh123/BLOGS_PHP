@@ -19,3 +19,6 @@ define('__PATH_HELPER__', __DIR__ . '/../Helpers');
 
 // Đường dẫn tới thư mục Components
 define('__PATH_COMPONENT__', __DIR__ . '/../Components');
+
+// Đường dẫn tới thư mục Configs
+define('__PATH_CONFIG__', __DIR__ . '/../Configs');

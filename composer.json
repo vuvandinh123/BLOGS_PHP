@@ -5,6 +5,8 @@
         }
     },
     "require": {
-        "illuminate/database": "^11.23"
+        "illuminate/database": "^11.23",
+        "illuminate/events": "^11.24",
+        "vlucas/phpdotenv": "^5.6"
     }
 }

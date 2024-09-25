@@ -1,4 +1,3 @@
-
 services:
   php:
     build:
@@ -8,6 +7,9 @@ services:
       - .:/var/www/html
     expose:
       - 9000
+    networks:
+      - app-network
+
   nginx:
     image: nginx:latest
     volumes:
@@ -17,3 +19,26 @@ services:
       - "8000:80"
     depends_on:
       - php
+    networks:
+      - app-network
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 06012003asVN
+      MYSQL_DATABASE: blogs_app
+      MYSQL_USER: dinhdev
+      MYSQL_PASSWORD: 06012003asVN
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
