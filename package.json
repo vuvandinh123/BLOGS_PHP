@@ -1,0 +1,15 @@
+{
+  "name": "php_blogs_v2",
+  "version": "1.0.0",
+  "description": "tạo file docker-compose.yml ``` services:   php:     build:       context: .       dockerfile: Dockerfile     volumes:       - .:/var/www/html     expose:       - 9000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}
